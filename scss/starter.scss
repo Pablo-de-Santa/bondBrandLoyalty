@@ -51,6 +51,8 @@ $navbar-light-active-color: $primary;
 
 $btn-font-weight: bold;
 
+$hr-border-color: $primary;
+
 // @import "bootstrap/scss/root";
 @import "bootstrap/scss/reboot"; // Required
 @import "bootstrap/scss/type";
@@ -131,4 +133,17 @@ $btn-font-weight: bold;
 
 .btn-outline-primary {
   background-color: #fff;
+}
+
+.page-header {
+  margin-top: 70px;
+  border-top: 1px solid $primary;
+  border-bottom: 1px solid $primary;
+  padding: 15px 0;
+}
+
+@include media-breakpoint-up(lg) {
+  .separated-column +.separated-column {
+    border-left: 1px solid $primary;
+  }
 }

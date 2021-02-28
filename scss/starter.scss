@@ -25,6 +25,21 @@
 // Import just the styles you need. Note that some stylesheets are required no matter what.
 $blue: #1f57ab;
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+);
+
+
+
 @import "bootstrap/scss/functions"; // Required
 @import "bootstrap/scss/variables"; // Required
 @import "bootstrap/scss/mixins"; // Required
@@ -142,8 +157,54 @@ $hr-border-color: $primary;
   padding: 15px 0;
 }
 
+h2 {
+  letter-spacing: 5px;
+}
+
 @include media-breakpoint-up(lg) {
   .separated-column +.separated-column {
     border-left: 1px solid $primary;
+  }
+}
+
+.card.product-card {
+  background-color: #f2f2f2;
+  border-top: 1px solid $primary;
+  border-bottom: 1px solid $primary;
+  margin-top: 22px;
+  position: relative;
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 73px;
+    padding: 0 25px;
+  }
+
+  .card-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 130px;
+    display: block;
+  }
+
+  .card-body {
+    padding: 9px 15px 18px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .new-tag {
+    position: absolute;
+    right: -9px;
+    top: -9px;
+    width: 65px;
+    height: auto;
   }
 }

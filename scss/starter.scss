@@ -23,6 +23,7 @@
 // Option 2
 //
 // Import just the styles you need. Note that some stylesheets are required no matter what.
+$blue: #1f57ab;
 
 @import "bootstrap/scss/functions"; // Required
 @import "bootstrap/scss/variables"; // Required
@@ -31,6 +32,7 @@
 //
 // Override Bootstrap here
 //
+$grid-gutter-width: 20px;
 
 // Toggle global options
 $enable-gradients: true;
@@ -38,8 +40,16 @@ $enable-shadows: true;
 
 // Customize some defaults
 $body-bg: #fff;
-$primary: #1f57ab;
 $border-radius: .4rem;
+
+$headings-font-weight: bold;
+$headings-color: $primary;
+
+$navbar-light-color: $primary;
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $primary;
+
+$btn-font-weight: bold;
 
 // @import "bootstrap/scss/root";
 @import "bootstrap/scss/reboot"; // Required
@@ -86,18 +96,11 @@ $border-radius: .4rem;
   fill: currentColor;
 }
 
-a {
-  color: $primary;
-}
-
 .navbar-light {
   .navbar-toggler {
     margin-left: auto;
   }
   .navbar-nav {
-    .nav-link, .nav-link:hover {
-      color: $primary;
-    }
     @include media-breakpoint-up(lg) {
       .nav-item {
         .nav-link {
@@ -112,4 +115,20 @@ a {
       }
     }
   }
+}
+
+.banner {
+  min-height: 300px;
+  background-image: url('/assets/images/headerImage.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+
+  @include media-breakpoint-up(lg) {
+    min-height: 528px;
+  }
+}
+
+.btn-outline-primary {
+  background-color: #fff;
 }

@@ -210,8 +210,9 @@ h2 {
 
     .heart-filled-blue {
       fill: $primary;
+      cursor: pointer;
 
-      &.liked {
+      &.active {
         opacity: 1;
       }
     }
